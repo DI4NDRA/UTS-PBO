@@ -8,7 +8,7 @@ class Perusahaan {
 }
 
 class CutiTahunan extends Perusahaan {
-  consoleLog() {
+  KoutaCuti() {
     if ((this.Kuota <= this.MaksTahunan)) {
       return `Anda berhasil mengambil cuti tahunan (${this.Kuota} hari)`;
     } else {
@@ -18,7 +18,7 @@ class CutiTahunan extends Perusahaan {
 }
 
 class CutiSakit extends Perusahaan {
-  consoleLog() {
+  KoutaCuti() {
     if ((this.Kuota <= this.MaksSakit)) {
       return `Anda berhasil mengambil cuti sakit (${this.Kuota} hari)`;
     } else {
@@ -28,7 +28,7 @@ class CutiSakit extends Perusahaan {
 }
 
 class CutiMelahirkan extends Perusahaan {
-  consoleLog() {
+  KoutaCuti() {
     if ((this.Kuota <= this.MaksMelahirkan)) {
       return `Anda berhasil mengambil cuti melahirkan (${this.Kuota} hari)`;
     } else {
@@ -38,10 +38,10 @@ class CutiMelahirkan extends Perusahaan {
 }
 
 const Karyawan1 = new CutiTahunan(19);
-console.log(Karyawan1.consoleLog());
+console.log(Karyawan1.KoutaCuti());
 
 const Karyawan2 = new CutiSakit(5);
-console.log(Karyawan2.consoleLog());
+console.log(Karyawan2.KoutaCuti());
 
-const Karyawan3 = new CutiMelahirkan(98);
-console.log(Karyawan3.consoleLog());
+const Karyawan3 = new CutiMelahirkan(60);
+console.log(Karyawan3.KoutaCuti());
